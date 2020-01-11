@@ -105,10 +105,14 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="240" y="360" key="#ESLint/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" timestamp="1578773662265" />
-    <state x="271" y="296" key="CommitChangelistDialog2" timestamp="1578774213498">
+    <state x="271" y="296" key="CommitChangelistDialog2" timestamp="1578774220911">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="271" y="296" key="CommitChangelistDialog2/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" timestamp="1578774213498" />
+    <state x="271" y="296" key="CommitChangelistDialog2/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" timestamp="1578774220911" />
+    <state x="100" y="100" width="1094" height="1200" key="DiffContextDialog" timestamp="1578774321831">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="100" y="100" width="1094" height="1200" key="DiffContextDialog/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" timestamp="1578774321831" />
     <state width="1236" height="395" key="GridCell.Tab.0.bottom" timestamp="1578774152735">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -125,5 +129,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1236" height="395" key="GridCell.Tab.0.right/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" timestamp="1578774152734" />
+    <state x="240" y="434" key="Vcs.Push.Dialog.v2" timestamp="1578774232568">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="240" y="434" key="Vcs.Push.Dialog.v2/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" timestamp="1578774232568" />
   </component>
 </project>
