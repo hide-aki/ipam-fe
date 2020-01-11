@@ -15,7 +15,7 @@ class Nat extends React.Component {
     }
 
     componentDidMount() {
-        let url = 'https://fathomless-escarpment-92247.herokuapp.com/nat/get/testName'; //TODO PROVE NAME HERE
+        let url = 'http://fathomless-escarpment-92247.herokuapp.com/nat/get/testName'; //TODO PROVE NAME HERE
         return fetch(url)
             .then((response) => (response.json()))
             .then((responseJson) => {

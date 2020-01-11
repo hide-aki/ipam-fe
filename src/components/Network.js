@@ -15,7 +15,7 @@ class Network extends React.Component {
     }
 
     componentDidMount() {
-        let url = 'https://fathomless-escarpment-92247.herokuapp.com/network/get/testip'; //TODO PROVE IP HERE
+        let url = 'http://fathomless-escarpment-92247.herokuapp.com/network/get/testip'; //TODO PROVE IP HERE
         return fetch(url)
             .then((response) => (response.json()))
             .then((responseJson) => {

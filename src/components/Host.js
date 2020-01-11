@@ -14,7 +14,7 @@ class Host extends React.Component {
     }
 
     componentDidMount() {
-        let url = 'https://fathomless-escarpment-92247.herokuapp.com/host/get/testip'; //TODO PROVE IP HERE
+        let url = 'http://fathomless-escarpment-92247.herokuapp.com/host/get/testip'; //TODO PROVE IP HERE
         return fetch(url)
             .then((response) => (response.json()))
             .then((responseJson) => {

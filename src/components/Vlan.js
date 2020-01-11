@@ -13,7 +13,7 @@ class Vlan extends React.Component {
     }
 
     componentDidMount() {
-        let url = 'https://fathomless-escarpment-92247.herokuapp.com/vlan/get/12312312312'; //TODO PROVE ID HERE
+        let url = 'http://fathomless-escarpment-92247.herokuapp.com/vlan/get/12312312312'; //TODO PROVE ID HERE
         return fetch(url)
             .then((response) => (response.json()))
             .then((responseJson) => {
