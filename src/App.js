@@ -9,46 +9,53 @@ import Host from "./components/Host";
 import Network from "./components/Network";
 import Nat from "./components/Nat";
 import Vlan from "./components/Vlan";
+import Home from "./components/Home";
+import {Route, Router, Switch} from "react-router-dom";
+
+import history from "./utils/history";
 import Sidebar from "./components/Sidebar";
 
-function onClick(e, item) {
-    window.alert(JSON.stringify(item, null, 2));
-}
+// function onClick(e, item) {
+//     window.alert(JSON.stringify(item, null, 2));
+// }
 
 const items = [
-    { name: "home", label: "Home", Icon: HomeIcon, onClick },
+    {name: "home", label: "Home", Icon: HomeIcon},
     {
-        name: "hosts", label: "Host", Icon: SettingsIcon, onClick
+        name: "hosts", label: "Host", Icon: SettingsIcon
     },
     {
-        name: "network",  label: "Network", Icon: NetworkWifiIcon, onClick
+        name: "network", label: "Network", Icon: NetworkWifiIcon
     },
     {
-        name: "vlan",  label: "VLAN", Icon: DesktopWindowsIcon, onClick
+        name: "vlan", label: "VLAN", Icon: DesktopWindowsIcon
     },
     {
-        name: "nat", label: "NAT", Icon: ReceiptIcon, onClick
+        name: "nat", label: "NAT", Icon: ReceiptIcon
     }
 ];
 
 
 function App() {
     return (
-        <div className="container">
-            <div className="sidebar">
-            <Sidebar items={items}/>
+        <Router history={history}>
+            <div className="row">
+                <div className="column">
+                    <Sidebar items={items}/>
+                </div>
+                <div className="column main">
+                    <div className="flex-grow-1 mt-5">
+                        <Switch>
+                            <Route path="/Home" exact component={Home}/>
+                            <Route path="/Host" component={Host}/>
+                            <Route path="/NAT" component={Nat}/>
+                            <Route path="/Network" component={Network}/>
+                            <Route path="/VLAN" component={Vlan}/>
+                        </Switch>
+                    </div>
+                </div>
             </div>
-            <div className="main">
-                <h1>Host</h1>
-                <Host/>
-                <h1>Network</h1>
-                <Network/>
-                <h1>NAT</h1>
-                <Nat/>
-                <h1>VLAN</h1>
-                <Vlan/>
-            </div>
-        </div>
+        </Router>
     );
 }
 
