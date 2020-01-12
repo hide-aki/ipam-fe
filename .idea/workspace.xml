@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6967091b-2e0b-4f2a-a8b5-98fb06f2d2e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Host.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Nat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Network.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Vlan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +39,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="last_opened_file_path" value="C:/Program Files/nodejs/node.exe" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,14 +48,30 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\opt\code\GUI\ipam-fe\src\components" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" path-to-node="C:/Program Files/nodejs/node" nameIsGenerated="true" path-to-js-file="index.js" working-dir="$PROJECT_DIR$/src">
       <method v="2" />
     </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
@@ -69,18 +84,16 @@
       <envs />
       <method v="2" />
     </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+    <list>
+      <item itemvalue="JavaScript Debug.Debug Application" />
+      <item itemvalue="Node.js.index.js" />
+      <item itemvalue="npm.npm start" />
+    </list>
+    <recent_temporary>
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <item itemvalue="Node.js.index.js" />
       </list>
-    </option>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -94,11 +107,26 @@
       <updated>1578769343610</updated>
       <workItem from="1578769345050" duration="146000" />
       <workItem from="1578769645770" duration="4490000" />
+      <workItem from="1578842317013" duration="705000" />
+      <workItem from="1578843525793" duration="8588000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="240" y="360" key="#ESLint" timestamp="1578773662265">

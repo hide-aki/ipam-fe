@@ -6,6 +6,9 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
+    "@material-ui/core": "^4.6.1",
+    "@material-ui/icons": "^4.5.1",
+    "npx": "^10.2.0",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
@@ -32,5 +35,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.0",
+    "@babel/core": "^7.8.0",
+    "@babel/preset-env": "^7.8.0",
+    "@babel/preset-react": "^7.8.0"
   }
 }

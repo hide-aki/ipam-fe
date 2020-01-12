@@ -1,35 +1,54 @@
 import React from 'react';
 import './App.css';
+import HomeIcon from "@material-ui/icons/Home";
+import ReceiptIcon from "@material-ui/icons/Receipt";
+import NetworkWifiIcon from '@material-ui/icons/NetworkWifi';
+import DesktopWindowsIcon from "@material-ui/icons/DesktopWindows";
+import SettingsIcon from "@material-ui/icons/Settings";
 import Host from "./components/Host";
 import Network from "./components/Network";
 import Nat from "./components/Nat";
 import Vlan from "./components/Vlan";
-import {Link, Route, Router, Switch} from "react-router-dom";
-import Home from "./components/Home";
+import Sidebar from "./components/Sidebar";
 
-import history from "./utils/history";
+function onClick(e, item) {
+    window.alert(JSON.stringify(item, null, 2));
+}
+
+const items = [
+    { name: "home", label: "Home", Icon: HomeIcon, onClick },
+    {
+        name: "hosts", label: "Host", Icon: SettingsIcon, onClick
+    },
+    {
+        name: "network",  label: "Network", Icon: NetworkWifiIcon, onClick
+    },
+    {
+        name: "vlan",  label: "VLAN", Icon: DesktopWindowsIcon, onClick
+    },
+    {
+        name: "nat", label: "NAT", Icon: ReceiptIcon, onClick
+    }
+];
+
 
 function App() {
     return (
-        <Router history={history}>
-            <div id="app" className="d-flex flex-column h-100">
-                <div className="flex-grow-1 mt-5">
-                    <ul className="list-group">
-                        <li className="list-group-item"><Link to="/host">Show Host</Link></li>
-                        <li className="list-group-item"><Link to="/nat">Show Nat</Link></li>
-                        <li className="list-group-item"><Link to="/network">Show Network</Link></li>
-                        <li className="list-group-item"><Link to="/vlan">Show Vlan</Link></li>
-                    </ul>
-                    <Switch>
-                        <Route path="/" exact component={Home}/>
-                        <Route path="/host" component={Host}/>
-                        <Route path="/nat" component={Nat}/>
-                        <Route path="/network" component={Network}/>
-                        <Route path="/vlan" component={Vlan}/>
-                    </Switch>
-                </div>
+        <div className="container">
+            <div className="sidebar">
+            <Sidebar items={items}/>
             </div>
-        </Router>
+            <div className="main">
+                <h1>Host</h1>
+                <Host/>
+                <h1>Network</h1>
+                <Network/>
+                <h1>NAT</h1>
+                <Nat/>
+                <h1>VLAN</h1>
+                <Vlan/>
+            </div>
+        </div>
     );
 }
 
