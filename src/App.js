@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import HomeIcon from "@material-ui/icons/Home";
 import ReceiptIcon from "@material-ui/icons/Receipt";
 import NetworkWifiIcon from '@material-ui/icons/NetworkWifi';
@@ -11,9 +10,14 @@ import Nat from "./components/Nat";
 import Vlan from "./components/Vlan";
 import Home from "./components/Home";
 import {Route, Router, Switch} from "react-router-dom";
+import store from './store';
+import {Provider} from 'react-redux';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import history from "./utils/history";
 import Sidebar from "./components/Sidebar";
+import TestForm from "./components/TestForm";
 
 // function onClick(e, item) {
 //     window.alert(JSON.stringify(item, null, 2));
@@ -38,13 +42,11 @@ const items = [
 
 function App() {
     return (
-        <Router history={history}>
-            <div className="row">
-                <div className="column">
-                    <Sidebar items={items}/>
-                </div>
-                <div className="column main">
-                    <div className="flex-grow-1 mt-5">
+        <Provider store={store}>
+            <MuiThemeProvider muiTheme={getMuiTheme()}>
+                <Router history={history}>
+                    <div style={{padding: 15}}>
+                        <Sidebar/>
                         <Switch>
                             <Route path="/Home" exact component={Home}/>
                             <Route path="/Host" component={Host}/>
@@ -53,9 +55,9 @@ function App() {
                             <Route path="/VLAN" component={Vlan}/>
                         </Switch>
                     </div>
-                </div>
-            </div>
-        </Router>
+                </Router>
+            </MuiThemeProvider>
+        </Provider>
     );
 }
 
