@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6967091b-2e0b-4f2a-a8b5-98fb06f2d2e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Sidebar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HostForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HostPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NatForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NetworkForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/VlanForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/VlanPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -129,37 +131,21 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="240" y="360" key="#ESLint" timestamp="1578773662265">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="240" y="360" key="#ESLint/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" timestamp="1578773662265" />
-    <state x="271" y="296" key="CommitChangelistDialog2" timestamp="1578774328500">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="271" y="296" key="CommitChangelistDialog2/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" timestamp="1578774328500" />
-    <state x="100" y="100" width="1094" height="1200" key="DiffContextDialog" timestamp="1578774321831">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="100" y="100" width="1094" height="1200" key="DiffContextDialog/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" timestamp="1578774321831" />
-    <state width="1236" height="395" key="GridCell.Tab.0.bottom" timestamp="1578774152735">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1236" height="395" key="GridCell.Tab.0.bottom/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" timestamp="1578774152735" />
-    <state width="1236" height="395" key="GridCell.Tab.0.center" timestamp="1578774152734">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1236" height="395" key="GridCell.Tab.0.center/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" timestamp="1578774152734" />
-    <state width="1236" height="395" key="GridCell.Tab.0.left" timestamp="1578774152734">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1236" height="395" key="GridCell.Tab.0.left/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" timestamp="1578774152734" />
-    <state width="1236" height="395" key="GridCell.Tab.0.right" timestamp="1578774152734">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1236" height="395" key="GridCell.Tab.0.right/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" timestamp="1578774152734" />
-    <state x="240" y="434" key="Vcs.Push.Dialog.v2" timestamp="1578774330245">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="240" y="434" key="Vcs.Push.Dialog.v2/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" timestamp="1578774330245" />
+    <state x="240" y="360" key="#ESLint" />
+    <state x="240" y="360" key="#ESLint/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" />
+    <state x="271" y="296" key="CommitChangelistDialog2" />
+    <state x="271" y="296" key="CommitChangelistDialog2/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" />
+    <state x="100" y="100" width="1094" height="1200" key="DiffContextDialog" />
+    <state x="100" y="100" width="1094" height="1200" key="DiffContextDialog/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" />
+    <state width="1236" height="395" key="GridCell.Tab.0.bottom" />
+    <state width="1236" height="395" key="GridCell.Tab.0.bottom/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" />
+    <state width="1236" height="395" key="GridCell.Tab.0.center" />
+    <state width="1236" height="395" key="GridCell.Tab.0.center/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" />
+    <state width="1236" height="395" key="GridCell.Tab.0.left" />
+    <state width="1236" height="395" key="GridCell.Tab.0.left/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" />
+    <state width="1236" height="395" key="GridCell.Tab.0.right" />
+    <state width="1236" height="395" key="GridCell.Tab.0.right/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" />
+    <state x="240" y="434" key="Vcs.Push.Dialog.v2" />
+    <state x="240" y="434" key="Vcs.Push.Dialog.v2/3840.0.1536.816/0.0.2560.1400@0.0.2560.1400" />
   </component>
 </project>
