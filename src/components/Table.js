@@ -62,6 +62,14 @@ function Table(props) {
                                     setData(prevState => {
                                         const data = [...prevState];
                                         data.push(newData);
+                                        fetch(ipamCoreUrl + type + "/create", {
+                                            method: 'POST',
+                                            body: JSON.stringify(newData),
+                                            headers: {
+                                                'Accept': 'application/json, text/plain',
+                                                'Content-Type': 'application/json;charset=UTF-8'
+                                            }
+                                        }).then(response => console.log(response));
                                         return {...prevState, data};
                                     });
                                 }, 600);
@@ -95,6 +103,14 @@ function Table(props) {
                                     setData(prevState => {
                                         const data = [...prevState];
                                         data.splice(data.indexOf(oldData), 1);
+                                        fetch(ipamCoreUrl + type + "/delete", {
+                                            method: 'DELETE',
+                                            body: JSON.stringify(oldData),
+                                            headers: {
+                                                'Accept': 'application/json, text/plain',
+                                                'Content-Type': 'application/json;charset=UTF-8'
+                                            }
+                                        });
                                         return {...prevState, data};
                                     });
                                 }, 600);
