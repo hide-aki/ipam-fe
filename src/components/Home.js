@@ -5,6 +5,7 @@ class Home extends Component {
         return (
             <div>
                 <h1>Welcome Home</h1>
+                <p>GUI project for IPAM - IP Address Management</p>
             </div>
         );
     }

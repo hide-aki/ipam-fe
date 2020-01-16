@@ -1,7 +1,4 @@
 import React from 'react';
-import Host from "./components/Host";
-import Nat from "./components/Nat";
-import Vlan from "./components/Vlan";
 import Home from "./components/Home";
 import {Route, Router, Switch} from "react-router-dom";
 import store from './store';
@@ -13,10 +10,9 @@ import {makeStyles} from '@material-ui/core/styles';
 import history from "./utils/history";
 import Sidebar from "./components/Sidebar";
 import NetworkHook from "./components/NetworkHook";
-
-// function onClick(e, item) {
-//     window.alert(JSON.stringify(item, null, 2));
-// }
+import HostHook from "./components/HostHook";
+import VlanHook from "./components/VlanHook";
+import NatHook from "./components/NatHook";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -48,10 +44,10 @@ function App() {
                             <div className={classes.toolbar}/>
                             <Switch>
                                 <Route path="/Home" exact component={Home}/>
-                                <Route path="/Host" component={Host}/>
-                                <Route path="/Nat" component={Nat}/>
+                                <Route path="/Host" component={HostHook}/>
+                                <Route path="/Nat" component={NatHook}/>
                                 <Route path="/Network" component={NetworkHook}/>
-                                <Route path="/Vlan" component={Vlan}/>
+                                <Route path="/Vlan" component={VlanHook}/>
                             </Switch>
                         </main>
                     </Router>

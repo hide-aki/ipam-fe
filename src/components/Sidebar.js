@@ -69,17 +69,6 @@ const useStyles = makeStyles(theme => ({
             width: theme.spacing(9) + 1,
         },
     },
-    // toolbar: {
-    //     display: 'flex',
-    //     alignItems: 'center',
-    //     justifyContent: 'flex-end',
-    //     padding: theme.spacing(0, 1),
-    //     ...theme.mixins.toolbar,
-    // },
-    // content: {
-    //     flexGrow: 1,
-    //     padding: theme.spacing(3),
-    // },
 }));
 
 export default function MiniDrawer() {
@@ -95,8 +84,8 @@ export default function MiniDrawer() {
         setOpen(false);
     };
 
-    const icons = [<HomeIcon/>, <AccountCircleIcon/>, <StorageIcon/>, <WifiIcon/>, <RouterIcon/>
-    ];
+    const icons = [<HomeIcon/>, <AccountCircleIcon/>, <StorageIcon/>, <WifiIcon/>, <RouterIcon/>];
+    const routes = ['Home', 'Host', 'Nat', 'Network', 'Vlan'];
 
     return (
         <div className={classes.root}>
@@ -143,9 +132,9 @@ export default function MiniDrawer() {
                     </IconButton>
                 </div>
                 <Divider/>
-                <List>
-                    {['/Home', '/Host', '/Nat', '/Network', '/Vlan'].map((text, index) => (
-                        <Link to={text}>
+                <List style={{marginTop: 10}}>
+                    {routes.map((text, index) => (
+                        <Link to={"/" + text}>
                             <ListItem button key={text}>
                                 <ListItemIcon>{icons[index]}</ListItemIcon>
                                 {text}
@@ -155,9 +144,6 @@ export default function MiniDrawer() {
                 </List>
                 <Divider/>
             </Drawer>
-            {/*<main className={classes.content}>*/}
-            {/*    <div className={classes.toolbar}/>*/}
-            {/*</main>*/}
         </div>
     );
 }
