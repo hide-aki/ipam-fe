@@ -8,11 +8,19 @@ export default class HostPage extends React.Component {
     }
 
     handleSubmit(event) {
+        event.preventDefault();
         const data = new FormData(event.target);
-        console.log(data);
+        var object = {};
+        data.forEach(function(value, key){
+            object[key] = value;
+        });
+        const json = JSON.stringify(object);
+
+        console.log(json);
         fetch("https://fathomless-escarpment-92247.herokuapp.com/host/create", {
             method: 'POST',
-            body: data,
+            headers:{ "Content-Type": 'application/json' },
+            body: json,
         }).then((response) => (response.json()))
             .then((responseJson) => {
                 console.log(responseJson)

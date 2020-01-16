@@ -17,36 +17,31 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import history from "./utils/history";
 import Sidebar from "./components/Sidebar";
-import TestForm from "./components/TestForm";
-
-// function onClick(e, item) {
-//     window.alert(JSON.stringify(item, null, 2));
-// }
 
 const items = [
-    {name: "home", label: "Home", Icon: HomeIcon},
-    {
-        name: "hosts", label: "Host", Icon: SettingsIcon
-    },
-    {
-        name: "network", label: "Network", Icon: NetworkWifiIcon
-    },
-    {
-        name: "vlan", label: "VLAN", Icon: DesktopWindowsIcon
-    },
-    {
-        name: "nat", label: "NAT", Icon: ReceiptIcon
-    }
+    ["Home", "Home", <HomeIcon/>],
+    [
+        "Host", "Host", <SettingsIcon/>
+    ],
+    [
+        "Network", "Network", <NetworkWifiIcon/>
+    ],
+    [
+        "Vlan", "VLAN", <DesktopWindowsIcon/>
+    ],
+    [
+        "Nat", "NAT", <ReceiptIcon/>
+    ]
 ];
 
-
 function App() {
+    console.log(items[0][0]);
     return (
         <Provider store={store}>
             <MuiThemeProvider muiTheme={getMuiTheme()}>
                 <Router history={history}>
                     <div style={{padding: 15}}>
-                        <Sidebar/>
+                        <Sidebar names={items}/>
                         <Switch>
                             <Route path="/Home" exact component={Home}/>
                             <Route path="/Host" component={Host}/>

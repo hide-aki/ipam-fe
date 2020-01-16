@@ -13,13 +13,15 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import Home from "./Home";
-import HostForm from "./HostForm";
+import {Link, withRouter} from "react-router-dom"
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
 import HostPage from "./HostPage";
+import HomeIcon from "@material-ui/icons/Home";
+import ReceiptIcon from "@material-ui/icons/Receipt";
+import SettingsIcon from "@material-ui/core/SvgIcon/SvgIcon";
+import Host from "./Host";
 
 const drawerWidth = 240;
 
@@ -84,9 +86,10 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function MiniDrawer() {
+export default function MiniDrawer(props) {
     const classes = useStyles();
     const theme = useTheme();
+    const names = props.names;
     const [open, setOpen] = React.useState(false);
 
     const handleDrawerOpen = () => {
@@ -143,22 +146,16 @@ export default function MiniDrawer() {
                 </div>
                 <Divider/>
                 <List>
-                    {['Home', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>
-                            <ListItemText primary={text}/>
-                        </ListItem>
+                    {names.map((text, index) => (
+                        <Link to={text[0]} key={text[0]}>
+                            <ListItem button>
+                                <ListItemIcon>{text[2]}</ListItemIcon>
+                                <ListItemText primary={text[0]}/>
+                            </ListItem>
+                        </Link>
                     ))}
                 </List>
                 <Divider/>
-                {/*<List>*/}
-                {/*    {['All mail', 'Trash', 'Spam'].map((text, index) => (*/}
-                {/*        <ListItem button key={text}>*/}
-                {/*            <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>*/}
-                {/*            <ListItemText primary={text}/>*/}
-                {/*        </ListItem>*/}
-                {/*    ))}*/}
-                {/*</List>*/}
             </Drawer>
             <main className={classes.content}>
                 <div className={classes.toolbar}/>
