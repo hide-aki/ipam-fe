@@ -64,6 +64,7 @@ const useStyles = makeStyles(theme => ({
 
 const MaterialUiForm = props => {
     const {handleSubmit, pristine, reset, submitting} = props;
+    handleSubmit();
     const classes = useStyles();
     return (
         <form className={classes.root} onSubmit={handleSubmit}>

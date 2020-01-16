@@ -18,8 +18,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import Home from "./Home";
-import Network from "./Network";
-import TestForm from "./TestForm";
+import {Link} from "react-router-dom"
+import HostPage from "./HostPage";
 
 const drawerWidth = 240;
 
@@ -97,6 +97,10 @@ export default function MiniDrawer() {
         setOpen(false);
     };
 
+    const handleSubmit = () => {
+        console.log("Przekazana funkcja");
+    };
+
     return (
         <div className={classes.root}>
             <CssBaseline/>
@@ -143,10 +147,12 @@ export default function MiniDrawer() {
                 </div>
                 <Divider/>
                 <List>
-                    {['Home', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                    {['/Home', '/Host', '/NAT', '/Network', '/VLAN'].map((text, index) => (
                         <ListItem button key={text}>
                             <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>
-                            <ListItemText primary={text}/>
+                            {/*<Link to={text}/>*/}
+                            {/*<ListItemText primary={text}><Link to={text}>Home</Link></ListItemText>*/}
+                            <Link to={text}>{text}</Link>
                         </ListItem>
                     ))}
                 </List>
@@ -162,18 +168,19 @@ export default function MiniDrawer() {
             </Drawer>
             <main className={classes.content}>
                 <div className={classes.toolbar}/>
-                <TestForm/>
+                {/*<TestForm handleSubmit={handleSubmit}/>*/}
+                <HostPage/>
                 {/*<Typography paragraph>*/}
-                    {/*Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt*/}
-                    {/*ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum*/}
-                    {/*facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit*/}
-                    {/*gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id*/}
-                    {/*donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit*/}
-                    {/*adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.*/}
-                    {/*Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis*/}
-                    {/*imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget*/}
-                    {/*arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem*/}
-                    {/*donec massa sapien faucibus et molestie ac.*/}
+                {/*Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt*/}
+                {/*ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum*/}
+                {/*facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit*/}
+                {/*gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id*/}
+                {/*donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit*/}
+                {/*adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.*/}
+                {/*Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis*/}
+                {/*imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget*/}
+                {/*arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem*/}
+                {/*donec massa sapien faucibus et molestie ac.*/}
                 {/*</Typography>*/}
             </main>
         </div>
