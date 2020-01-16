@@ -14,19 +14,17 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
-import Home from "./Home";
-import Network from "./Network";
-import TestForm from "./TestForm";
+import {Link} from 'react-router-dom'
+
+import HomeIcon from '@material-ui/icons/Home';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import StorageIcon from '@material-ui/icons/Storage';
+import WifiIcon from '@material-ui/icons/Wifi';
+import RouterIcon from '@material-ui/icons/Router';
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
-    root: {
-        display: 'flex',
-    },
     appBar: {
         zIndex: theme.zIndex.drawer + 1,
         transition: theme.transitions.create(['width', 'margin'], {
@@ -71,17 +69,17 @@ const useStyles = makeStyles(theme => ({
             width: theme.spacing(9) + 1,
         },
     },
-    toolbar: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-        padding: theme.spacing(0, 1),
-        ...theme.mixins.toolbar,
-    },
-    content: {
-        flexGrow: 1,
-        padding: theme.spacing(3),
-    },
+    // toolbar: {
+    //     display: 'flex',
+    //     alignItems: 'center',
+    //     justifyContent: 'flex-end',
+    //     padding: theme.spacing(0, 1),
+    //     ...theme.mixins.toolbar,
+    // },
+    // content: {
+    //     flexGrow: 1,
+    //     padding: theme.spacing(3),
+    // },
 }));
 
 export default function MiniDrawer() {
@@ -96,6 +94,9 @@ export default function MiniDrawer() {
     const handleDrawerClose = () => {
         setOpen(false);
     };
+
+    const icons = [<HomeIcon/>, <AccountCircleIcon/>, <StorageIcon/>, <WifiIcon/>, <RouterIcon/>
+    ];
 
     return (
         <div className={classes.root}>
@@ -119,7 +120,7 @@ export default function MiniDrawer() {
                         <MenuIcon/>
                     </IconButton>
                     <Typography variant="h6" noWrap>
-                        Mini variant drawer
+                        IPAM Application
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -143,39 +144,20 @@ export default function MiniDrawer() {
                 </div>
                 <Divider/>
                 <List>
-                    {['Home', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>
-                            <ListItemText primary={text}/>
-                        </ListItem>
+                    {['/Home', '/Host', '/Nat', '/Network', '/Vlan'].map((text, index) => (
+                        <Link to={text}>
+                            <ListItem button key={text}>
+                                <ListItemIcon>{icons[index]}</ListItemIcon>
+                                {text}
+                            </ListItem>
+                        </Link>
                     ))}
                 </List>
                 <Divider/>
-                {/*<List>*/}
-                {/*    {['All mail', 'Trash', 'Spam'].map((text, index) => (*/}
-                {/*        <ListItem button key={text}>*/}
-                {/*            <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>*/}
-                {/*            <ListItemText primary={text}/>*/}
-                {/*        </ListItem>*/}
-                {/*    ))}*/}
-                {/*</List>*/}
             </Drawer>
-            <main className={classes.content}>
-                <div className={classes.toolbar}/>
-                <TestForm/>
-                {/*<Typography paragraph>*/}
-                    {/*Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt*/}
-                    {/*ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum*/}
-                    {/*facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit*/}
-                    {/*gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id*/}
-                    {/*donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit*/}
-                    {/*adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.*/}
-                    {/*Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis*/}
-                    {/*imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget*/}
-                    {/*arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem*/}
-                    {/*donec massa sapien faucibus et molestie ac.*/}
-                {/*</Typography>*/}
-            </main>
+            {/*<main className={classes.content}>*/}
+            {/*    <div className={classes.toolbar}/>*/}
+            {/*</main>*/}
         </div>
     );
 }
